@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-+dwf=lkgm-5@+o0n$!^luv8q@!bw=uz(rq!@**o1dpu_ghi6e)
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "bus-ticket-booking-r6kw.onrender.com",
-    "localhost",
-    "127.0.0.1"
+    'bus-ticket-booking-r6kw.onrender.com',
+    '.onrender.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
