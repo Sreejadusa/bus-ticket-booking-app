@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-+dwf=lkgm-5@+o0n$!^luv8q@!bw=uz(rq!@**o1dpu_ghi6e)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "bus-ticket-booking-r6kw.onrender.com",
+    "localhost",
+    "127.0.0.1"
+]
 
 
 # Application definition
