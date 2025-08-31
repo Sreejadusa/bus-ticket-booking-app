@@ -16,7 +16,7 @@ const RegisterForm = () => {
         e.preventDefault()
         setIsLoading(true)
         try {
-            await axios.post('http://localhost:8000/api/register/', form);
+            await axios.post('https://travels-fullstack-project.onrender.com/api/register/', form);
             setMessage('Registration successful! You can now login.')
             setForm({ username: '', email: '', password: '' })
         } catch (error) {
