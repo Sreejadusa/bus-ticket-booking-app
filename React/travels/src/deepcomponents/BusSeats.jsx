@@ -15,7 +15,7 @@ const BusSeats = ({ token }) => {
     useEffect(() => {
         const fetchBusDetails = async () => {
             try {
-                const response = await axios(`https://bus-ticket-booking-app-95si.onrender.com/api/buses/${busId}`)
+                const response = await axios(`${import.meta.env.VITE_API_BASE_URL}/api/buses/${busId}`)
                 setBus(response.data)
                 setSeats(response.data.seats || [])
             } catch (error) {
@@ -37,7 +37,7 @@ const BusSeats = ({ token }) => {
       
         try {
           const res = await axios.post(
-            'https://bus-ticket-booking-app-95si.onrender.com/api/booking/',
+            '${import.meta.env.VITE_API_BASE_URL}/api/booking/',
             { seat: seatId },
             {
               headers: {

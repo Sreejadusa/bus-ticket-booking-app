@@ -8,7 +8,7 @@ const UserBookings = ({ token, userId }) => {
   useEffect(() => {
     if (!token || !userId) return;
 
-    fetch(`https://bus-ticket-booking-app-95si.onrender.com/api/user/${userId}/bookings/`, {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user/${userId}/bookings/`, {
       headers: {
         Authorization: `Token ${token}`,
       },

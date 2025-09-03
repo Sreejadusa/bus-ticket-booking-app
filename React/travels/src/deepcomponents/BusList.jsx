@@ -15,7 +15,7 @@ const BusList = ({token}) => {
     useEffect(() => {
         const fetchBuses = async () => {
             try {
-                const response = await axios.get("https://bus-ticket-booking-app-95si.onrender.com/api/buses/")
+                const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/buses/`);
 
                 setBuses(response.data)
             } catch (error) {

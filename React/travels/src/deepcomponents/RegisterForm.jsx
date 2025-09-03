@@ -16,7 +16,7 @@ const RegisterForm = () => {
         e.preventDefault()
         setIsLoading(true)
         try {
-            await axios.post('https://bus-ticket-booking-app-95si.onrender.com/api/register/', form);
+            await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/register/', form);
             setMessage('Registration successful! You can now login.')
             setForm({ username: '', email: '', password: '' })
         } catch (error) {

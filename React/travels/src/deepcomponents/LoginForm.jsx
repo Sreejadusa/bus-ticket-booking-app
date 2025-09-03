@@ -21,7 +21,7 @@ const LoginForm = ({ onLogin }) => {
         e.preventDefault()
         setIsLoading(true)
         try {
-            const response = await axios.post('https://bus-ticket-booking-app-95si.onrender.com/api/login/', form)
+            const response = await axios.post('${import.meta.env.VITE_API_BASE_URL}/api/login/', form)
             setMessage('Login Success')
             if (onLogin) {
                 onLogin(response.data.token, response.data.user_id)
