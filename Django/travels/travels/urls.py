@@ -17,8 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("<h1 align=center>Welcome to Travels API!</h1>")
 
 urlpatterns = [
+    path('', home, name="home"), 
     path('admin/', admin.site.urls),
     path('api-token-auth/', obtain_auth_token),
     path('api/', include("bookings.urls"))

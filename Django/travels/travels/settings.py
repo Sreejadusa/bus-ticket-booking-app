@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+dwf=lkgm-5@+o0n$!^luv8q@!bw=uz(rq!@**o1dpu_ghi6e)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*',"bus-ticket-booking-app-95si.onrender.com"]
 
 
 # Application definition
@@ -141,14 +141,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-
-MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 
 # Default primary key field type
