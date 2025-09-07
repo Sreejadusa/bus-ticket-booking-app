@@ -70,7 +70,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-    'https://bus-ticket-bookingapp.netlify.app/',
+    'https://bus-ticket-bookingapp.netlify.app',
 ]
 
 
